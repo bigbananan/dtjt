@@ -9,6 +9,7 @@ use App\Taiwan;
 use App\China;
 use App\Hongkong;
 use App\Bukumimpi;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -42,7 +43,22 @@ class IndexController extends Controller
 
     	return view('index.singapura', compact('singapura','sorted','users'));
     }
+    
+    public function showuser()
+    {
+        $user1 = User::all()->last();
 
+        $users = User::all();
+
+        $collection = collect($users);
+
+        $sorted = $collection->sortByDesc('name');
+
+        $users = User::paginate(10);
+
+        return view('index.userlist', compact('sorted','users'));
+    }
+    
     public function showhasilsingapura()
     {
         $singapura = Singapura::all()->last();
