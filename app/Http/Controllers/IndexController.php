@@ -46,7 +46,7 @@ class IndexController extends Controller
     
     public function showuser()
     {
-        $user1 = User::all()->last();
+        $user = User::all()->last();
 
         $users = User::all();
 
