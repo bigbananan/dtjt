@@ -30,8 +30,8 @@
                 <div class="form-group">
                     <label for="body">Group</label>
                     <select class="form-control" name="group_id">
-                        @foreach ($groups as $group)
-                            <option value="{{ $group->id }}">{{ $group->name }}</option>
+                        @foreach ($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
                         @endforeach
                     </select>
                 </div>
