@@ -56,7 +56,7 @@ class IndexController extends Controller
 
         $users = User::paginate(10);
 
-        return view('index.userlist', compact('sorted','users'));
+        return view('index.userlist', compact('user','sorted','users'));
     }
     
     public function showhasilsingapura()
