@@ -38,7 +38,7 @@ Route::get('/analisiscambodia', 'IndexController@showanalisiscambodia');
 Route::get('/analisistaiwan', 'IndexController@showanalisistaiwan');
 Route::get('/analisischina', 'IndexController@showanalisischina');
 Route::get('/analisishongkong', 'IndexController@showanalisishongkong');
-
+Route::get('/userlist', 'IndexController@showuser');
 
 Route::auth();
 
